@@ -1,12 +1,57 @@
 @import "tailwindcss";
 
-@import "tailwindcss";
+/* =========================
+   Fonts
+   ========================= */
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter_18pt-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter_18pt-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter_18pt-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter_18pt-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+/* =========================
+   Theme
+   ========================= */
+
+@theme {
+  --font-inter: "Inter", sans-serif;
+
+  --color-primary: #2563eb;
+  --color-dark: #0f172a;
+  --color-background: #f8fafc;
+  --color-card: #ffffff;
+  --color-border: #e2e8f0;
+
+  --color-success: #16a34a;
+  --color-warning: #f59e0b;
+  --color-danger: #dc2626;
+  --color-info: #0284c7;
+}
+
+/* =========================
+   Base
+   ========================= */
 
 @layer base {
-  /* =========================
-     Global / Reset
-     ========================= */
-
   *,
   *::before,
   *::after {
@@ -18,16 +63,13 @@
   }
 
   body {
+    @apply font-inter text-dark bg-background;
+
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f8fafc;
-    color: #0f172a;
-    line-height: 1.5;
+    padding: 0;
   }
 
-  /* =========================
-     Headings
-     ========================= */
+  /* Headings */
 
   h1 {
     font-size: 2.25rem;
@@ -62,21 +104,18 @@
     font-weight: 600;
   }
 
-  /* =========================
-     Paragraphs
-     ========================= */
+  /* Paragraphs */
 
   p {
     margin: 0 0 1rem;
     line-height: 1.7;
   }
 
-  /* =========================
-     Links
-     ========================= */
+  /* Links */
 
   a {
-    color: #2563eb;
+    @apply text-primary;
+
     text-decoration: none;
   }
 
@@ -84,9 +123,7 @@
     text-decoration: underline;
   }
 
-  /* =========================
-     Lists
-     ========================= */
+  /* Lists */
 
   ul {
     list-style-type: disc;
@@ -104,9 +141,7 @@
     margin-bottom: 0.25rem;
   }
 
-  /* =========================
-     Images
-     ========================= */
+  /* Images */
 
   img {
     display: block;
@@ -114,25 +149,16 @@
     height: auto;
   }
 
-  /* =========================
-     Forms
-     ========================= */
+  /* Forms */
 
   input,
   textarea,
   select {
     font: inherit;
-  }
-
-  input,
-  textarea,
-  select {
     outline: none;
   }
 
-  /* =========================
-     Tables
-     ========================= */
+  /* Tables */
 
   table {
     width: 100%;
@@ -143,7 +169,7 @@
   td {
     padding: 0.75rem 1rem;
     text-align: left;
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid var(--color-border);
   }
 
   th {
@@ -151,13 +177,28 @@
     background-color: #f1f5f9;
   }
 
-  /* =========================
-     Horizontal Rule
-     ========================= */
+  /* Horizontal Rule */
 
   hr {
     margin: 1.5rem 0;
     border: 0;
-    border-top: 1px solid #e2e8f0;
+    border-top: 1px solid var(--color-border);
   }
+}
+
+/* =========================
+   Reusable Utilities
+   ========================= */
+
+@utility input-field {
+  @apply w-full px-2 py-1 border border-border rounded-md
+         focus:border-primary focus:outline-none;
+}
+
+@utility btn-primary {
+  @apply px-4 py-2 bg-primary text-white rounded-md
+         font-medium transition-colors
+         hover:bg-blue-700
+         focus:outline-none focus:ring-2 focus:ring-primary/50
+         cursor-pointer;
 }
