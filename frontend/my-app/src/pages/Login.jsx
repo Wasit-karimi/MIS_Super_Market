@@ -1,4 +1,9 @@
+import { useNavigate } from "react-router-dom"
+
 const Login = () => {
+
+  const navigate = useNavigate()
+
   return (
     <section className=" w-full h-screen bg-background flex flex-col justify-center items-center gap-5">
 
@@ -20,7 +25,7 @@ const Login = () => {
 
         </div>
 
-        <button type="submit" className="btn-primary">Submit</button>
+        <button type="submit" className="btn-primary" onClick={() => navigate('/dashboard')}>Submit</button>
       </form>
     </section>
   )
