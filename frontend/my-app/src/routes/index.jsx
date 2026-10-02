@@ -16,6 +16,9 @@ import EditCustomers from "../pages/Customers/EditCustomers";
 import ReturnsList from "../pages/PurchaseReturns/ReturnsList";
 import ReturnDetails from "../pages/PurchaseReturns/ReturnDetails";
 import NewReturn from "../pages/PurchaseReturns/NewReturn";
+import PurchaseList from "../pages/Purchases/PurchaseList";
+import PurchaseDetails from "../pages/Purchases/PurchaseDetails";
+import NewPurchase from "../pages/Purchases/NewPurchase";
 
 export const routes = createBrowserRouter([
     {
@@ -114,6 +117,23 @@ export const routes = createBrowserRouter([
                     {
                         path: 'new',
                         element: <NewReturn />
+                    }
+                ]
+            },
+
+            // Purchases
+
+            {
+                index: true,
+                element: <PurchaseList />,
+                cheildren: [
+                    {
+                        path: ':id',
+                        element: <PurchaseDetails />
+                    },
+                    {
+                        path: 'new',
+                        element: <NewPurchase />
                     }
                 ]
             }
