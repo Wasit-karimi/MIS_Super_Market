@@ -71,7 +71,7 @@ export const routes = createBrowserRouter([
                     },
                     {
                         path: 'new',
-                        element: <AddCategories/>
+                        element: <AddCategories />
                     },
                     {
                         path: ':id/edit',
@@ -139,7 +139,7 @@ export const routes = createBrowserRouter([
                         element: <NewPurchase />
                     }
                 ]
-            }, 
+            },
 
             // Sales&POS
 
@@ -157,6 +157,26 @@ export const routes = createBrowserRouter([
                     {
                         path: 'list',
                         element: <SalesList />
+                    }
+                ]
+            },
+
+            // SalesReturns
+
+            {
+                path: '/salesreturns',
+                children: [
+                    {
+                        index: true,
+                        element: <ReturnsList />
+                    },
+                    {
+                        path: ':id',
+                        element: <ReturnDetails />
+                    },
+                    {
+                        path: 'new',
+                        element: <NewReturn />
                     }
                 ]
             }
