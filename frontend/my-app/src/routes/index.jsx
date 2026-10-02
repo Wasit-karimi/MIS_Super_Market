@@ -22,6 +22,10 @@ import NewPurchase from "../pages/Purchases/NewPurchase";
 import Pos from "../pages/Sales&POS/Pos";
 import SaleDetails from "../pages/Sales&POS/SaleDetails";
 import SalesList from "../pages/Sales&POS/SalesList";
+import SuppliersList from "../pages/Suppliers/SuppliersList";
+import SupplierDetails from "../pages/Suppliers/SupplierDetails";
+import AddSupplier from "../pages/Suppliers/AddSupplier";
+import EditSupplier from "../pages/Suppliers/EditSupplier";
 
 export const routes = createBrowserRouter([
     {
@@ -177,6 +181,30 @@ export const routes = createBrowserRouter([
                     {
                         path: 'new',
                         element: <NewReturn />
+                    }
+                ]
+            },
+
+            // Suppliers
+
+            {
+                path: '/suppliers',
+                children: [
+                    {
+                        index: true,
+                        element: <SuppliersList />
+                    },
+                    {
+                        path: ':id',
+                        element: <SupplierDetails />
+                    },
+                    {
+                        path: 'new',
+                        element: <AddSupplier />
+                    },
+                    {
+                        path: ':id/edit',
+                        element: <EditSupplier />
                     }
                 ]
             }
