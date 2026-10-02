@@ -19,6 +19,9 @@ import NewReturn from "../pages/PurchaseReturns/NewReturn";
 import PurchaseList from "../pages/Purchases/PurchaseList";
 import PurchaseDetails from "../pages/Purchases/PurchaseDetails";
 import NewPurchase from "../pages/Purchases/NewPurchase";
+import Pos from "../pages/Sales&POS/Pos";
+import SaleDetails from "../pages/Sales&POS/SaleDetails";
+import SalesList from "../pages/Sales&POS/SalesList";
 
 export const routes = createBrowserRouter([
     {
@@ -134,6 +137,26 @@ export const routes = createBrowserRouter([
                     {
                         path: 'new',
                         element: <NewPurchase />
+                    }
+                ]
+            }, 
+
+            // Sales&POS
+
+            {
+                path: '/sales&pos',
+                children: [
+                    {
+                        index: true,
+                        element: <Pos />
+                    },
+                    {
+                        path: ':id',
+                        element: <SaleDetails />
+                    },
+                    {
+                        path: 'list',
+                        element: <SalesList />
                     }
                 ]
             }
