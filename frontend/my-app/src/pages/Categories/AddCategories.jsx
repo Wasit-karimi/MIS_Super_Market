@@ -1,4 +1,3 @@
-
 const AddCategories = () => {
   return (
     <div>AddCategories</div>

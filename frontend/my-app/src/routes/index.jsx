@@ -6,6 +6,9 @@ import ProductsList from "../pages/Products/ProductsList";
 import AddProduct from "../pages/Products/AddProduct";
 import ProductDetail from "../pages/Products/ProductDetail";
 import EditProduct from "../pages/Products/EditProduct";
+import Categories from "../pages/Categories/Categories";
+import AddCategories from "../pages/Categories/AddCategories";
+import EditCategories from "../pages/Categories/EditCategories";
 
 export const routes = createBrowserRouter([
     {
@@ -19,6 +22,9 @@ export const routes = createBrowserRouter([
                 path: '/dashboard',
                 element: <Dashboard />
             },
+
+            // Products
+
             {
                 path: '/products',
                 children: [
@@ -40,6 +46,26 @@ export const routes = createBrowserRouter([
                     }
                 ]
             },
+
+            // Categories
+
+            {
+                path: '/categories',
+                children: [
+                    {
+                        index: true,
+                        element: <Categories />
+                    },
+                    {
+                        path: 'new',
+                        element: <AddCategories/>
+                    },
+                    {
+                        path: ':id/edit',
+                        element: <EditCategories />
+                    }
+                ]
+            }
 
 
         ]
