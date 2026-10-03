@@ -202,3 +202,7 @@
          focus:outline-none focus:ring-2 focus:ring-primary/50
          cursor-pointer;
 }
+
+@utility flex-center {
+  @apply flex justify-center items-center;
+}

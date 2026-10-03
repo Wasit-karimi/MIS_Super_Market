@@ -5,7 +5,7 @@ const MainLayout = () => {
     return (
         <>
             <Sidebar />
-            <main className="bg-green-300 absolute right-0 w-[70%] md:w-[60%چ lg:w-[85%] h-screen">
+            <main className=" fixed border right-0 top-0 w-[70%] sm:w-[60%] md:w-[65%] lg:w-[80%] xl:w-[82%] h-screen">
                 <Outlet />
             </main>
         </>
