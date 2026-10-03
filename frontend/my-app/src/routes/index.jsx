@@ -131,9 +131,12 @@ export const routes = createBrowserRouter([
             // Purchases
 
             {
-                index: true,
-                element: <PurchaseList />,
+                path: '/purchases',
                 cheildren: [
+                    {
+                        index: true,
+                        element: <PurchaseList />
+                    },
                     {
                         path: ':id',
                         element: <PurchaseDetails />
