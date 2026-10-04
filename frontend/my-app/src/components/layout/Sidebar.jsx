@@ -28,7 +28,7 @@ const Sidebar = () => {
 
                 {/* links */}
 
-                <div className='h-screen mx-auto px-1 py-2 shadow-md hover:shadow-lg w-[95%] sm:w-[90%] transition-all duration-200 rounded-md'>
+                <div className=' mx-auto px-1 py-2 shadow-md hover:shadow-lg w-[95%] sm:w-[90%] transition-all duration-200 rounded-md'>
                     {
                         accordionData.map((item) => (
                             <Accordion
