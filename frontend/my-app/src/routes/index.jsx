@@ -50,7 +50,7 @@ export const routes = createBrowserRouter([
                         element: <ProductsList />
                     },
                     {
-                        path: 'new',
+                        path: 'newproduct',
                         element: <AddProduct />
                     },
                     {
@@ -132,7 +132,7 @@ export const routes = createBrowserRouter([
 
             {
                 path: '/purchases',
-                cheildren: [
+                children: [
                     {
                         index: true,
                         element: <PurchaseList />
