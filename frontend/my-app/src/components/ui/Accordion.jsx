@@ -2,7 +2,8 @@ import { Link } from "react-router-dom"
 
 
 const Accordion = ({
-    title, link,
+    title, 
+    link,
     icon,
     children,
     isExpanded,
