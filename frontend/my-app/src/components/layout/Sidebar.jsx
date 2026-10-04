@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import logo from '../../assets/images/inventory-logo.png'
 import accordionData from '../../data/sidebarData'
-import Accordion from '../Accordion'
+import Accordion from '../ui/Accordion'
 
 const Sidebar = () => {
     const [expandedId, setExpandedId] = useState(null)
