@@ -114,8 +114,6 @@
   /* Links */
 
   a {
-    @apply text-primary;
-
     text-decoration: none;
   }
 
