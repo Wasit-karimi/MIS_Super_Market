@@ -114,13 +114,7 @@
   /* Links */
 
   a {
-    @apply text-primary;
-
     text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
   }
 
   /* Lists */
