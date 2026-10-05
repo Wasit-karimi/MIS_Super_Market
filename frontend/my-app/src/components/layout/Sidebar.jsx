@@ -13,7 +13,7 @@ const Sidebar = () => {
 
     return (
         <>
-            <aside className="absolute left-0 top-0 flex flex-col justify-between h-screen w-[30%] sm:w-[40%] md:w-[35%] lg:w-[20%] xl:w-[18%]">
+            <aside className="fixed left-0 top-0 flex flex-col justify-between h-screen w-[30%] sm:w-[40%] md:w-[35%] lg:w-[20%] xl:w-[18%]">
 
                 <div>
                     {/* logo */}
