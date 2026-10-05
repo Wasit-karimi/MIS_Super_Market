@@ -53,7 +53,7 @@ function SummaryCards() {
             </article>
 
             {/* Active Customers */}
-            <article className="rounded-xl border border-border bg-card p-5 shadow-sm">
+            <article className="rounded-xl border border-border bg-card p-5 shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer">
                 <div className="flex items-center gap-3">
                     <div className="grid h-10 w-10 place-items-center rounded-lg bg-green-50 text-success">
                         <i className="fa-solid fa-users text-lg" />
