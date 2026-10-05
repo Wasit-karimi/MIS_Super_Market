@@ -15,20 +15,20 @@ const Accordion = ({
 
         <div className={`bg-background my-2 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden`} >
 
-            <div className="flex justify-between items-center px-2 py-3 cursor-pointer transition-all duration-200 scale-100" onClick={onToggle}>
-                <h1 className="text-lg font-semibold">
+            <div className="flex items-center gap-2 px-2 py-3 cursor-pointer hover:bg-slate-200 transition-all duration-200 scale-100" onClick={onToggle}>
+                <i className={`${icon} md:text-lg text-sm`}></i>
+                <h1 className="leading-light font-light md:text-md text-sm">
                     {link ? <Link to={link} >{title}</Link> : title}
                 </h1>
-                <i className={icon}></i>
             </div>
 
 
 
             <div className={`flex flex-col gap-2 px-2 text-sm overflow-hidden transition-all duration-300 ease-in ${isExpanded ? 'max-h-auto opacity-100 pb-2' : 'max-h-0 opacity-0 pb-0'}`}>
                 {children?.map((child) => (
-                    <Link key={child.id} to={child.link} className="text-dark flex items-center gap-2 py-1 hover:text-info hover:pl-3 transition-all duration-200">
-                        <i className={child.icon}></i>
-                        <span>{child.title}</span>
+                    <Link key={child.id} to={child.link} className="text-dark flex items-center gap-2 py-1 pl-2 hover:text-info hover:pl-3 transition-all duration-200">
+                        <i className={`${child.icon} leading-light font-light lg:text-md md:text-md text-xs`}></i>
+                        <span className="leading-light font-light lg:text-md md:text-md text-xs">{child.title}</span>
                     </Link>
                 ))}
             </div>
