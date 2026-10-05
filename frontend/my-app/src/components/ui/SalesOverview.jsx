@@ -3,7 +3,7 @@ import Button from "./Button";
 
 function SalesOverview() {
     return (
-        <section className="rounded-xl border border-border bg-card p-5 shadow-sm hover:shadow-md transition-all duration-300">
+        <section className="rounded-xl border border-border bg-card p-5 shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer">
             <div className="flex items-start justify-between gap-4">
                 <div>
                     <h2 className="font-bold text-dark">

@@ -7,7 +7,7 @@ function StatsCards() {
       {stats.map((stat) => (
         <article
           key={stat.title}
-          className="rounded-xl border border-border bg-card p-5 shadow-sm hover:shadow-md hover:bg-border transition-all duration-300 cursor-pointer"
+          className="rounded-xl border border-border bg-card p-5 shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer"
         >
           <div className="flex items-start justify-between gap-3">
             <div
