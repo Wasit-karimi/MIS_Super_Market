@@ -2,6 +2,8 @@
 // Dashboard Data
 // ==============================
 
+import DashboardHeader from "../../components/ui/DashboardHeader";
+
 const stats = [
   {
     title: "Total Revenue",
@@ -86,33 +88,8 @@ const activities = [
   },
 ];
 
-// ==============================
-// Dashboard Header
-// ==============================
 
-function DashboardHeader() {
-  return (
-    <header className="mb-7 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-      <div>
-        <p className="mb-1 text-sm text-slate-500">
-          Here&apos;s what&apos;s happening with your store today.
-        </p>
 
-        <h1 className="text-2xl font-bold tracking-tight text-dark">
-          Dashboard overview
-        </h1>
-      </div>
-
-      <button
-        type="button"
-        className="inline-flex w-fit items-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-      >
-        <i className="fa-solid fa-plus text-xs" />
-        New sale
-      </button>
-    </header>
-  );
-}
 
 // ==============================
 // Statistics Cards
