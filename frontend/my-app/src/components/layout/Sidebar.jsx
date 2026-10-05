@@ -44,6 +44,8 @@ const Sidebar = () => {
                     </div>
                 </div>
 
+                {/* profile */}
+
                 <div className='mx-auto mb-2 px-3 py-2 flex gap-2 justify-between items-center  shadow-xl hover:shadow-lg w-[95%] sm:w-[90%] transition-all duration-200 rounded-md '>
                     <div className='flex gap-2 cursor-pointer'>
                         <img src={icon} alt="User" className=' flex-center ring-2 ring-primary rounded-full' width={24} />
